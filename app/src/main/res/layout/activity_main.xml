@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:ignore="SpUsage"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/topImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <TextView
+            android:id="@+id/amountLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="Износ на кредит"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@id/amountEditText"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topImageView" />
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:text="--"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/amountLabel"
+            app:layout_constraintEnd_toStartOf="@id/currencyLabel"
+            app:layout_constraintStart_toEndOf="@id/amountLabel" />
+
+        <TextView
+            android:id="@+id/currencyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ден."
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="22dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/amountLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/amountEditText" />
+
+        <SeekBar
+            android:id="@+id/amountSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_margin="16dp"
+            android:max="17900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amountLabel"
+            app:layout_constraintWidth_max="500dp"
+            android:thumbTint="@color/orange"
+            android:progressBackgroundTint="#F84007"
+            android:progressTint="#F84007"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_min"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@id/amountSeekBar"
+            app:layout_constraintTop_toBottomOf="@id/amountSeekBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_max"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="@id/amountSeekBar"
+            app:layout_constraintTop_toBottomOf="@id/amountSeekBar" />
+
+
+        <TextView
+            android:id="@+id/termLengthLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="Број на месечни рати"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@id/termLengthEditText"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/amountSeekBar" />
+
+        <EditText
+            android:id="@+id/termLengthEditText"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:text="6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/termLengthLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/termLengthLabel" />
+
+        <SeekBar
+            android:id="@+id/termLengthSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:max="30"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/termLengthLabel"
+            app:layout_constraintWidth_max="500dp"
+            android:thumbTint="@color/orange"
+            android:progressBackgroundTint="#F84007"
+            android:progressTint="#F84007"
+            />
+
+        <TextView
+            android:id="@+id/termLengthMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/term_min"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@id/termLengthSeekBar"
+            app:layout_constraintTop_toBottomOf="@id/termLengthSeekBar" />
+
+        <TextView
+            android:id="@+id/termLengthMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/term_max"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="@id/termLengthSeekBar"
+            app:layout_constraintTop_toBottomOf="@id/termLengthSeekBar" />
+
+
+
+        <TextView
+            android:id="@+id/rateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rate_label_empty"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rate"/>
+
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="0dp"
+            android:text="--"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="32dp"
+            app:layout_constraintEnd_toStartOf="@id/rateCurrency"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/secondDividerView"
+            app:layout_constraintTop_toBottomOf="@id/termLengthMin"/>
+
+        <TextView
+            android:id="@+id/rateCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="ден."
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="24dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/rate"
+            app:layout_constraintStart_toEndOf="@id/rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+
+
+    <TextView
+        android:id="@+id/interestRateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="12dp"
+        android:text="Каматна стапка:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toTopOf="@id/provisionLabel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/interestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/interestRateLabel"
+        app:layout_constraintStart_toEndOf="@id/interestRateLabel" />
+
+    <TextView
+        android:id="@+id/provisionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Провизија:"
+        app:layout_constraintBottom_toTopOf="@id/totalLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+    <TextView
+        android:id="@+id/provision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="--"
+        android:textSize="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/provisionLabel"
+        app:layout_constraintStart_toEndOf="@id/provisionLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="12dp"
+        android:text="Вкупно:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="--"
+        android:textSize="14dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@id/totalLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+    <TextView
+        android:id="@+id/firstPaymentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Доспевање на прва рата"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@id/lastPaymentLabel"
+        app:layout_constraintStart_toStartOf="@id/lastPaymentLabel"
+        app:layout_constraintTop_toBottomOf="@id/secondDividerView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+    <TextView
+        android:id="@+id/firstPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/firstPaymentLabel"
+        app:layout_constraintStart_toStartOf="@id/firstPaymentLabel"
+        app:layout_constraintTop_toBottomOf="@id/firstPaymentLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <TextView
+        android:id="@+id/lastPaymentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Доспевање на последна рата"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstPayment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+         />
+
+    <TextView
+        android:id="@+id/lastPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@id/lastPaymentLabel"
+        app:layout_constraintStart_toStartOf="@id/lastPaymentLabel"
+        app:layout_constraintTop_toBottomOf="@id/lastPaymentLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <View
+        android:id="@+id/secondDividerView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="@color/orange"
+        app:layout_constraintBottom_toTopOf="@id/interestRateLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

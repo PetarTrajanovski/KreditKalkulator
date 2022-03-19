@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KreditKalkulator" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorSecondary">@color/orange</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/background</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.KreditKalkulator.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.KreditKalkulator.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.KreditKalkulator.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

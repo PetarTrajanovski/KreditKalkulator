@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Kredit Kalkulator Bez Kamata</string>
+    <string name="title_activity_main">Kredit Kalkulator Bez Kamata</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="amount_min"><b>1000</b> ден.</string>
+    <string name="amount_max"><b>180 000</b> ден.</string>
+    <string name="term_min"><b>6</b> месеци</string>
+    <string name="term_max"><b>36</b> месеци</string>
+    <string name="rate_label">Месечна рата за %d месеци</string>
+    <string name="rate_label_empty">Месечна рата</string>
+</resources>
